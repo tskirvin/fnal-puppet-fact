@@ -1,4 +1,4 @@
-# p_fact::manager
+# fact::manager
 #
 #   Set the system manager via facter.  The system manager is an array of
 #   individuals from puppet that are responsible for this system.
@@ -13,7 +13,7 @@
 #
 #   stdlib
 #
-class p_fact::manager (
+class fact::manager (
   $primary   = [ 'unknown' ],
   $secondary = [ 'unknown' ],
   $skip      = [ 'unknown', 'none', 'skip' ]
@@ -22,9 +22,9 @@ class p_fact::manager (
   validate_array ($secondary)
   validate_array ($skip)
 
-  p_fact::string { 'primary':   value => join (sort (unique ($primary)), ',') }
-  p_fact::string { 'secondary': value => join (sort (unique ($secondary)), ',') }
+  fact::string { 'primary':   value => join (sort (unique ($primary)), ',') }
+  fact::string { 'secondary': value => join (sort (unique ($secondary)), ',') }
 
   ## Contains both of the above, minus any 'skip' values
-  p_fact::string { 'manager': value => template('p_fact/manager.erb') }
+  fact::string { 'manager': value => template('p_fact/manager.erb') }
 }

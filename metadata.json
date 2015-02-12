@@ -1,11 +1,11 @@
 {
-  "name": "fnal-puppet-p_fact",
+  "name": "fnal-puppet-fact",
   "version": "1.0.0",
   "author": "Tim Skirvin <tskirvin@fnal.gov>",
   "summary": "manage /etc/facter/facts.d facts",
   "license": "Artistice License, Version 2.0",
-  "source": "https://github.com/tskirvin/fnal-puppet-p_fact",
-  "project_page": "https://github.com/tskirvin/fnal-puppet-p_fact",
+  "source": "https://github.com/tskirvin/fnal-puppet-fact",
+  "project_page": "https://github.com/tskirvin/fnal-puppet-fact",
   "issues_url": "",
   "tags": [ "puppet", "facter" ],
   "operatingsystem_support": [

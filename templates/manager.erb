@@ -1,0 +1,5 @@
+<% 
+  list = (@primary + @secondary).sort.uniq
+  @skip.each { |a| list.delete(a) }
+-%>
+<%= list.count > 0 ? list.join(",") : 'unknown' %>

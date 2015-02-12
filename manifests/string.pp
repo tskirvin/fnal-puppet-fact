@@ -1,4 +1,4 @@
-# p_fact::string
+# fact::string
 #
 #   Definition to set a system fact to a string.  This drops a file into
 #   /etc/facter/fact.d/${name}.txt containing 'name=value'.
@@ -12,15 +12,15 @@
 #
 # == Usage
 #
-#   p_fact::string { 'status': value => 'testing' }
+#   fact::string { 'status': value => 'testing' }
 #
-define p_fact::string (
+define fact::string (
   $basedir   = '/etc/facter/facts.d',
   $ensure    = 'present',
   $hide_diff = false,
   $value     = 'UNDEFINED'
 ) {
-  include p_fact
+  include fact
 
   $file    = "${basedir}/${name}.txt"
   $content = "${name}=${value}"
