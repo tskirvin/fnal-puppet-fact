@@ -26,5 +26,5 @@ class fact::manager (
   fact::string { 'secondary': value => join (sort (unique ($secondary)), ',') }
 
   ## Contains both of the above, minus any 'skip' values
-  fact::string { 'manager': value => template('p_fact/manager.erb') }
+  fact::string { 'manager': value => template('fact/manager.erb') }
 }
